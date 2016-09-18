@@ -1,0 +1,47 @@
+# App
+nbproject/
+ThinkPHP/
+Application/Runtime/
+
+# Eclipse
+.buildpath
+.project
+.cproject
+.settings/
+.externalToolBuilders/
+
+# PhpStorm
+.idea/
+.idea/*
+
+# PhpStorm
+.idea/
+.idea/*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+/*.tags
+/tags
+/*.tags_sorted_by_file
+/.htaccess
+*.htaccess
