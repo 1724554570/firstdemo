@@ -257,8 +257,7 @@ ul.simple-pagination {
         Light Theme Styles
 \*------------------------------------*/
 
-.light-theme a, .light-theme span {
-    float: left;
+.light-theme a, .light-theme span, .light-theme b{
     color: #666;
     font-size:14px;
     line-height:24px;
@@ -278,6 +277,21 @@ ul.simple-pagination {
     background: -ms-linear-gradient(top, #ffffff 0%,#efefef 100%); /* IE10+ */
     background: linear-gradient(top, #ffffff 0%,#efefef 100%); /* W3C */
     text-decoration: none;
+}
+
+.light-theme a, .light-theme span {
+    float: left;
+}
+
+.light-theme input{
+    width: 80px;
+    text-indent: 5px;
+    font-size: 14px;
+}
+
+.light-theme b{
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .light-theme a:hover {

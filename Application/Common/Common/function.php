@@ -48,7 +48,8 @@ function is_Panging($count = 0, $page = 0, $maxcount = 20, $mincount = 0) {
   if ($totalPages > 1) {
     $the_end = "<li class=\"gotopage\"  data-page=\"{$totalPages}\"><a href=\"javascript:void(0);\" class=\"page-link next\">尾页</a></li>";
   }
-  $resList = ($countsPage . $the_first . $up_page . $down_page . $the_end);
+  $searchInput = ''; //'<li class=""><input id="goPages" placeholder="跳转页数" value="' . ${page} . '"><b class="page-link scPage">跳转页</b></li>';
+  $resList = ($countsPage . $the_first . $up_page . $down_page . $the_end . $searchInput);
   return $resList;
 }
 
