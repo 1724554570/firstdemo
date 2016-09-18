@@ -1,7 +1,7 @@
 <?php
 
-const AGENT_MD5_KEY = 'KEYS'; // 字符加密默认值
-const USERS_MD5_KEY = 'users'; // 用户中心加密默认值
+        const AGENT_MD5_KEY = 'KEYS'; // 字符加密默认值
+        const USERS_MD5_KEY = 'users'; // 用户中心加密默认值
 
 /**
  * 计算页数
@@ -24,25 +24,20 @@ function getNums($page) {
  * @return type
  */
 function is_Panging($count = 0, $page = 0, $maxcount = 20, $mincount = 0) {
-  //$prvePage = '<li class=""><span class="prev">上一页</span></li>';
-  //$nextPage = '<li><a href="#page-2" class="page-link next">下一页</a></li>';
   $totalPages = ceil($count / $maxcount);
   if (!empty($totalPages) && $page > $totalPages) {
     $page = $totalPages;
   }
   $tt = ($totalPages < 1) ? 1 : $totalPages;
-  $countsPage = "<li class=\"\"><span class=\"prev\">共{$tt}页--当前第{$page}页</span></li>";
+  $countsPage = "<li class=\"\"><span class=\"prev\">共 {$tt} 页--当前第 {$page} 页</span></li>";
   // 上一页
   $up_row = $page - 1;
-  //$up_page = $up_row > 0 ? "<li class=\"\"  data-page=\"{$up_row}\"><a href=\"javascript:void(0);\" class=\"prev\">上一页</a></li>" : "";
   $up_page = "<li class=\"gotopage\"  data-page=\"{$up_row}\"><a href=\"javascript:void(0);\" class=\"prev\">上一页</a></li>";
-
   // 下一页
   $down_row = $page + 1;
   $down_page = ($down_row <= $totalPages) ?
           "<li class=\"gotopage\" data-page=\"{$down_row}\"><a href=\"javascript:void(0);\" class=\"page-link next\">下一页</a></li>" :
           "<li class=\"gotopage\" data-page=\"{$page}\"><a href=\"javascript:void(0);\" class=\"page-link next\">下一页</a></li>";
-
   // 首页
   $the_first = "";
   if ($totalPages >= 1) {
@@ -53,7 +48,20 @@ function is_Panging($count = 0, $page = 0, $maxcount = 20, $mincount = 0) {
   if ($totalPages > 1) {
     $the_end = "<li class=\"gotopage\"  data-page=\"{$totalPages}\"><a href=\"javascript:void(0);\" class=\"page-link next\">尾页</a></li>";
   }
-  return ($countsPage . $the_first . $up_page . $down_page . $the_end);
+  $resList = ($countsPage . $the_first . $up_page . $down_page . $the_end);
+  return $resList;
+}
+
+function setPages($count = 0, $page = 1, $maxcount = 20) {
+  $totalPages = ceil($count / $maxcount);
+  if ($page > $totalPages) {
+    $page = $totalPages;
+  }
+  $tt = ($totalPages < 1) ? 1 : $totalPages;
+  // 上一页 
+  if ($page) {
+    
+  }
 }
 
 /**

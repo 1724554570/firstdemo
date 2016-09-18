@@ -14,4 +14,7 @@ return array(
         '__plugins__'     => __ROOT__ . '/Public/AdminLTE-2.3.6/plugins',
         '__AdminLTE__'     => __ROOT__ . '/Public/AdminLTE-2.3.6/dist',
     ),
+    
+    'URL_MODEL' => '3', //URL模式
+    
 );

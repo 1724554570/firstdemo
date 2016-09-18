@@ -71,13 +71,37 @@ class UsersModel extends Model {
   }
 
   /**
+   * 返回数据总数
+   * @param type $search
+   * @return type
+   */
+  public function getCount($search) {
+    $sql = "select count(*) as c from " . self::tbname . "";
+    if (!empty($search)) {
+      $sql.=" where nickname like '%{$search}%'";
+    }
+    $model = new Model();
+    $res = $model->query($sql);
+    return $res[0];
+  }
+
+  /**
    * sql 查询数据
    * @return type
    */
-  public function lists($limit = '0,20') {
+  public function lists($page, $search = '') {
     $model = new Model();
     $tbname = self::tbname;
-    $sql = "select * from {$tbname} where 1 and uid > 0 order by ctime asc limit {$limit} ";
+    $sql = "select * from {$tbname} where 1";
+    if (!empty($search)) {
+      $sql.=" and nickname like '%{$search}%'";
+    }
+    $limit = '0,20';
+    if (!empty($page)) {
+      $st = getNums($page);
+      $limit = "{$st['startnum']},{$st['endnum']}";
+    }
+    $sql.= " and uid > 0 order by ctime asc limit {$limit} ";
     $res = $model->query($sql);
     return $res;
   }

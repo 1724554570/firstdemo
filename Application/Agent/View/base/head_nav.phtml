@@ -1,17 +1,11 @@
 <!--头部区域-->
 <header class="layout">
     <section class="header">
-        <hgroup>
-            <h1>在线系统</h1>
-            <!--<h2>ThinkPHP在线系统</h2>-->
-        </hgroup>
+        <hgroup><h1>在线系统</h1></hgroup>
         <ul class="operation">
-            <!--<li><a href="#"><i class="icon icon-file-chm"></i>下载CHM版</a></li>-->
-            <!--<li><a href="#"><i class="icon icon-file-pdf"></i>下载PDF版</a></li>--> 
             <li class="user">
-                <a class="Is_Login" href="javascript:;">欢迎 <i>{$_SESSION["Is_Login"]} </i> <b><?php if((int)$_SESSION['purviewids'] > 0){ echo "超级管理员";}else{ echo "管理员";}  ?> </b> </a>
-                <a href="{:U('Login/loginout')}">退出系统</a>
-                <!-- <a href="/user/register.html">注册</a> -->                
+                <a class="Is_Login" href="javascript:;">欢迎 <i>{$_SESSION["is_login"]['uname']} </i> <b><?php if((int)$_SESSION['is_login']['upower'] > 0){ echo "超级管理员";}else{ echo "管理员";}  ?> </b> </a>
+                <a href="{:U('Login/loginout')}">退出系统</a>          
             </li>
         </ul>
     </section>
@@ -28,8 +22,8 @@
             <li data-id="2" data-name="Tospell" class="">
                 <div class="div-tree-icon-switch"><a href="javascript:void(0);">Good 信息</a></div>
                 <ul>
-                    <li data-id="20" data-name="Tospell_index">
-                        <div><a href="{:U('Tospell/index')}" data-href="{:U('Tospell/index')}">Good 列表</a></div>
+                    <li data-id="20" data-name="Users_index">
+                        <div><a href="{:U('Users/index')}" data-href="{:U('Users/index')}">Good 列表</a></div>
                     </li>
                 </ul>       
             </li>

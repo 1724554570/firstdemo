@@ -5,8 +5,8 @@ return array(
     'URL_CASE_INSENSITIVE' => true, //解决URL大小写
     'SESSION_AUTO_START' => true, //是否开启session
     
-    'URL_MODEL' => '2', //URL模式
-    'URL_PATHINFO_DEPR' => '_',
+//    'URL_MODEL' => '2', //URL模式
+//    'URL_PATHINFO_DEPR' => '_',
     
     // 多个伪静态后缀设置 用|分割
     'URL_HTML_SUFFIX' => 'html|shtml|xml',

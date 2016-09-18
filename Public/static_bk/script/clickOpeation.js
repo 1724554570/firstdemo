@@ -12,7 +12,7 @@ $(function () {
     });
     $(".bottom").click(function () {
         var url = $("#loadUrl").val();
-        var pages = "";
+        var pages = 1;
         var searchname = $("#searchname").val();
         var datas = {page: pages, searchname: searchname};
         MenusThis.loadSearchPram(url, datas);
